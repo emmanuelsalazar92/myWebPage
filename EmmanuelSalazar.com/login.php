@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- LINK -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 		<style>
@@ -39,11 +40,26 @@
         <title>Ingresar a Emmanuel Salazar</title>
     </head>
     <body>
+	        <nav class="navbar navbar-default navbar-fixed-top light-blue darken-3">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://www.emmanuelsalazar.com" style="color: #FFCE00;">
+                    Emmanuel Salazar
+                    </a>
+                </div>
+            </div>
+        </nav>
 		<div class="section"></div>
 		<main>
 			<center>
 				<h5 class="indigo-text">Ingrese sus credenciales</h5>
-				<div class="section"></div>
+				<div class="section red-text">
+				<?php
+					if( $_GET['status'] == 'success'):
+						echo 'Felicidades, nuevo usuario creado.';
+					endif;			
+				?>
+				</div>
 				<div class="container">
 					<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 						<form class="col s12" method="post">

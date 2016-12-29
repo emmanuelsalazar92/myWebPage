@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- LINK -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 		<style>
@@ -35,11 +36,29 @@
         <title>Crear nuevo usuario</title>
     </head>
     <body>
+	        <nav class="navbar navbar-default navbar-fixed-top light-blue darken-3">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://www.emmanuelsalazar.com" style="color: #FFCE00;">
+                    Emmanuel Salazar
+                    </a>
+                </div>
+            </div>
+        </nav>
 		<div class="section"></div>
 		<main>
 			<center>
 				<h5 class="indigo-text">Crear nuevo usuario</h5>
-				<div class="section"></div>
+				<div class="section red-text">
+				<?php
+					if( $_GET['status'] == 'server'):
+						echo 'Lo sentimos, en este momento tenemos un problema de comunicacion con el servidor';
+					endif;
+					if( $_GET['status'] == 'already'):
+						echo 'Lo sentimos, el email ingresado se encuentra en el sistema, favor intentar con otro email';
+					endif;				
+				?>
+				</div>
 				<div class="container">
 					<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 70px 0px 70px; border: 1px solid #EEE;">
 						<form class="col s12" action="create.php" method="post">

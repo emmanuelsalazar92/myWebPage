@@ -26,14 +26,14 @@ $contrasena = md5 ("" . $_POST['password'] . "");
 $sql = "INSERT INTO user(name, lastname, email, password, userType_iduserType, status_idstatus) VALUES ('" . $_POST['name'] . "', '" . $_POST['lastname'] . "', '" . $email . "', '" . $contrasena . "', 1, 1)";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    header('location:login.php?status=success');
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    header('location:newuser.php?status=server');
 }
 
 
 } else {
-echo "The email " . $email . " already exists <br>";
+	header('location:newuser.php?status=already');
 }
 
 $conn->close();
