@@ -21,39 +21,47 @@
 			body {
 			background: #fff;
 			}
-			.input-field input[type=date]:focus + label,
 			.input-field input[type=text]:focus + label,
-			.input-field input[type=email]:focus + label,
 			.input-field input[type=password]:focus + label {
 			color: #e91e63;
 			}
-			.input-field input[type=date]:focus,
 			.input-field input[type=text]:focus,
-			.input-field input[type=email]:focus,
 			.input-field input[type=password]:focus {
 			border-bottom: 2px solid #e91e63;
 			box-shadow: none;
 			}
 		</style>
         <!-- TITLE -->
-        <title>Ingresar a Emmanuel Salazar</title>
+        <title>Crear nuevo usuario</title>
     </head>
     <body>
 		<div class="section"></div>
 		<main>
 			<center>
-				<h5 class="indigo-text">Ingrese sus credenciales</h5>
+				<h5 class="indigo-text">Crear nuevo usuario</h5>
 				<div class="section"></div>
 				<div class="container">
-					<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
-						<form class="col s12" method="post">
+					<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 70px 0px 70px; border: 1px solid #EEE;">
+						<form class="col s12" action="create.php" method="post">
 							<div class='row'>
 								<div class='col s12'>
 								</div>
 							</div>
 							<div class='row'>
 								<div class='input-field col s12'>
-									<input class='validate' type='email' name='email' id='email' style="text-align: left"/>
+									<input class='validate' type='text' name='name' id='name' style="text-align: left"/>
+									<label for='name'>Nombre</label>
+								</div>
+							</div>
+														<div class='row'>
+								<div class='input-field col s12'>
+									<input class='validate' type='text' name='lastname' id='lastname' style="text-align: left"/>
+									<label for='lastname'>Apellido</label>
+								</div>
+							</div>
+							<div class='row'>
+								<div class='input-field col s12'>
+									<input class='validate' type='text' name='email' id='email' style="text-align: left"/>
 									<label for='email'>Email</label>
 								</div>
 							</div>
@@ -63,16 +71,21 @@
 									<label for='password'>Contrase&ntilde;a</label>
 								</div>
 							</div>
+														<div class='row'>
+								<div class='input-field col s12'>
+									<input class='validate' type='password' name='re_password' id='re_password' />
+									<label for='re_password'>Re ingrese contrase&ntilde;a</label>
+								</div>
+							</div>
 							<br />
 							<center>
 								<div class='row'>
-									<button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+									<button type='submit' name='btn_create' class='col s12 btn btn-large waves-effect indigo'>Crear nuevo</button>
 								</div>
 							</center>
 						</form>
 					</div>
 				</div>
-				<a href="newuser.php">Crear cuenta</a>
 			</center>
 			<div class="section"></div>
 			<div class="section"></div>
