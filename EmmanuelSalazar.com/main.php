@@ -37,7 +37,7 @@
 			}
 		</style>
         <!-- TITLE -->
-        <title>Ingresar a Emmanuel Salazar</title>
+        <title>Emmanuel Salazar</title>
     </head>
     <body>
 	        <nav class="navbar navbar-default navbar-fixed-top light-blue darken-3">
@@ -52,47 +52,14 @@
 		<div class="section" style="padding-top:60px;"></div>
 		<main>
 			<center>
-				<h5 class="indigo-text">Ingrese sus credenciales</h5>
-				<div class="section red-text">
+				<div class="section green-text">
 				<?php
 					if( $_GET['status'] == 'success'):
-						echo 'Felicidades, nuevo usuario creado.';
-					endif;	
-					if( $_GET['status'] == 'error'):
-						echo 'No existen usuarios con el email y contrase&ntilde;a ingresados';
-					endif;	
-					
+						echo 'Bienvenido al sistema';
+					endif;			
 				?>
 				</div>
-				<div class="container">
-					<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
-						<form class="col s12" action="loginuser.php" method="post">
-							<div class='row'>
-								<div class='col s12'>
-								</div>
-							</div>
-							<div class='row'>
-								<div class='input-field col s12'>
-									<input class='validate' type='email' name='email' id='email' style="text-align: left"/>
-									<label for='email'>Email</label>
-								</div>
-							</div>
-							<div class='row'>
-								<div class='input-field col s12'>
-									<input class='validate' type='password' name='password' id='password' />
-									<label for='password'>Contrase&ntilde;a</label>
-								</div>
-							</div>
-							<br />
-							<center>
-								<div class='row'>
-									<button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
-								</div>
-							</center>
-						</form>
-					</div>
-				</div>
-				<a href="newuser.php">Crear cuenta</a>
+
 			</center>
 			<div class="section"></div>
 			<div class="section"></div>
