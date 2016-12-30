@@ -45,7 +45,7 @@
                 </div>
             </div>
         </nav>
-		<div class="section"></div>
+		<div class="section" style="padding-top:60px;"></div>
 		<main>
 			<center>
 				<h5 class="indigo-text">Crear nuevo usuario</h5>
